@@ -1,0 +1,201 @@
+.backdrop {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+
+    transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+.modal {
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--acent-text-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    transform: translate(-50%, -50%) scaleY(1);
+    transition: transform 250ms linear;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scaleY(0);
+}
+
+.modal-close {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+    @include align;
+    justify-content: center;
+}
+
+.modal-close-icon {
+    transition: fill 250ms linear;
+    .modal-close:hover &,
+    .modal-close:focus & {
+        fill: var(--acent-color);
+    }
+}
+
+.modal-title {
+    @include font(700, 20px, 1.15, 0.03em);
+    text-align: center;
+    color: var(--title-text-color);
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    width: 100%;
+    height: 40px;
+    transition: fill 250ms linear;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    color: var(--title-text-color);
+    font-size: 14px;
+    outline: transparent;
+    &:focus, &:hover {
+        border-color: var(--acent-color);
+    }
+    &::placeholder {
+        @include font(400, 12px, 1.16, 0.01em);
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.modal-input-icon {
+    transition: fill 250ms linear;
+    .modal-input:focus+&,
+    .modal-input:hover+& {
+        fill: var(--acent-color);
+    }
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.modal-field {
+    margin-bottom: 10px;
+}
+
+.modal-field.comment-field {
+    margin-bottom: 20px;
+}
+
+.modal-input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-text {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    resize: none;
+    font-size: 14px;
+    color: var(--title-text-color);
+    outline: transparent;
+    transition: fill 250ms linear;
+    &:hover, &:focus {
+        border-color: var(--acent-color);
+    }
+    &::placeholder {
+    @include font(400, 12px, 1.16, 0.01em);
+    color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.modal-button {
+    padding: 10px 52px;
+    margin: 0 auto;
+    display: block;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: var(--acent-text-color);
+    background-color: var(--acent-color);
+    font-family: inherit;
+    @include font(700, 16px, 1.87, 0.06em);
+    border: none;
+    cursor: pointer;
+
+    transition: background-color 250ms linear, color 250ms linear, box-shadow 250ms linear;
+    &:hover, &:focus{
+        border-radius: 4px;
+        background: #188CE8;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.input-label {
+    @include font(400, 12px, 1.16, 0.01em);
+    color: var(--primary-text-color);
+
+    & span {
+        display: block;
+        margin-bottom: 4px;
+    }
+}
+
+.check-field {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.check-text {
+    @include font(400, 14px, 1.71, 0.03em);
+    color: var(--primary-text-color);
+    @include align;
+}
+
+.check-text span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 3px;
+    margin-right: 7px;
+    @include align;
+    justify-content: center;
+    fill: transparent;
+    .input-check:checked + & {
+    background-color: #2196F3;
+    border: transparent;
+    fill: var(--acent-text-color);
+    }
+    .input-check:focus+ &,
+    .input-check:hover+ & {
+    border-color: var(--acent-color);
+    }
+}
+
+.check-link {
+    color: #2196F3;
+    display: block;
+    @include font(400, 14px, 1.71, 0.03em);
+    text-decoration-line: underline;
+    margin-left: 5px;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
