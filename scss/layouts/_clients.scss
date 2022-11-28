@@ -1,6 +1,14 @@
 .clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include tablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include dektop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .clients-hidden {
@@ -8,17 +16,30 @@
 
     color: var(--title-text-color);
     text-align: center;
-    @include font(700, 36px, 1.16, 0.03em);
+    @include font(700, 28px, 1.17, 0.03em);
+    @include tablet {
+        @include font(700, 28px, 1.17, 0.03em);
+    }
+    @include dektop {
+        @include font(700, 36px, 1.16, 0.03em);
+    }
 }
 
 .clients-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .clients-icon-item {
-    width: calc((100% - 150px) / 6);
+    width: calc((100% - 30px) / 2);
     height: 92px;
+    @include tablet {
+        width: calc((100% - 60px)/3);
+    }
+    @include dektop {
+        width: calc((100% - 150px)/6);
+    }   
 }
 
 .clients-icon-link {
