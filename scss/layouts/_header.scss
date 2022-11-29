@@ -11,14 +11,35 @@
     @include font(700, 26px, 1.19, 0.03em);
 }
 
+.header-link{
+
+}
+
+.header-mobile-icon{
+    @include tablet {
+        display: none;
+    }
+    @include dektop {
+        display: none;
+    }
+}
+
 .accent {
     color: var(--acent-color);
 }
 
 .site-nav {
-    display: flex;
+    display: none;
     gap: 30px;
+
+    @include tablet {
+        display: flex;
+    }
+    @include dektop {
+        display: flex;
+    }
 }
+
 
 .link-header {
     position: relative;
@@ -43,6 +64,13 @@
 .adress-header {
     @include align;
     gap: 50px;
+    display: none;
+    @include tablet {
+        display: flex;
+    }
+    @include dektop {
+        display: flex;
+    }
 }
 
 .header-container {

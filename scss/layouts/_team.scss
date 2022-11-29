@@ -1,10 +1,10 @@
 .team-hidden {
     margin-bottom: 50px;
     color: var(--title-text-color);
-    @include font(700, 28px, 1.17, 0.03em);
+    @include font(700, 28px, 1.16, 0.03em);
     text-align: center;
     @include tablet {
-        @include font(700, 28px, 1.17, 0.03em);
+        @include font(700, 28px, 1.16, 0.03em);
     }
     @include dektop {
         @include font(700, 36px, 1.16, 0.03em);

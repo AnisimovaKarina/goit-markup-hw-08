@@ -5,16 +5,21 @@
 }
 
 .logo-footer {
-    color: var(--acent-text-color);
-
     text-decoration: none;
     font-family: 'raleway', sans-serif;
-    @include font(700, 26px, 1.19, 0.03em);
+    @include font(700, 24px, 1.169, 0.03em);
+    @include tablet {
+        @include font(700, 24px, 1.16, 0.03em);
+    }
+    @include dektop {
+        @include font(700, 26px, 1.19, 0.03em);
+    }
 }
 
 .nav-link:not(:last-child) {
     margin-bottom: 9px;
 }
+
 
 .nav .nav-address {
     color: var(--acent-text-color);
@@ -27,7 +32,7 @@
 
     &:hover,
     &:focus {
-    color: var(--acent-color);
+        color: var(--acent-color);
     }
 }
 
@@ -41,7 +46,7 @@
 
     &:hover,
     &:focus {
-    color: var(--acent-color);
+        color: var(--acent-color);
     }
 }
 
@@ -59,8 +64,26 @@
 
 .footer-container {
     display: flex;
-    gap: 70px;
     align-items: baseline;
+    flex-wrap: wrap;
+}
+.footer-wrap{
+    display: flex;
+    // justify-content: space-between;
+    align-items: baseline;
+}
+.form-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container-address {
+    margin-right: 97px;
+}
+
+.container-link {
+    margin-right: 94px;
 }
 
 .footer-soc-list {
@@ -86,16 +109,17 @@
 
     &:hover,
     &:focus {
-    background-color: var(--acent-color);
+        background-color: var(--acent-color);
     }
 }
 
 .footer-soc-icon {
     fill: var(--acent-text-color);
     transition: fill 250ms linear;
+
     .footer-soc-link:hover &,
     .footer-soc-link:focus & {
-    fill: var(--acent-text-color);
+        fill: var(--acent-text-color);
     }
 }
 
@@ -122,10 +146,11 @@
     font-size: 16px;
     outline: transparent;
     background-color: transparent;
+
     &::placeholder {
-    @include font(400, 16px, 1.25, 0.03em);
-    @include align;
-    color: rgba(255, 255, 255, 0.6);
+        @include font(400, 16px, 1.25, 0.03em);
+        @include align;
+        color: rgba(255, 255, 255, 0.6);
     }
 }
 
@@ -147,6 +172,7 @@
     @include align;
     justify-content: center;
 }
+
 .modal-send {
     fill: var(--acent-text-color);
     margin-left: 10px;

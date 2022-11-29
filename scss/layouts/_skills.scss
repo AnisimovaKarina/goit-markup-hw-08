@@ -1,14 +1,10 @@
 .skills {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    @include tablet {
-        padding-top: 60px;
-        padding-bottom: 60px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    @media screen and (max-width: 1199px) {
+        display: none;
     }
-    @include dektop {
-        padding-top: 94px;
-        padding-bottom: 94px;
-    }
+
 }
 
 .skills-link{
@@ -19,22 +15,27 @@
     @include dektop {
         width: calc((100% - 60px)/3);
     }
+
 }
 
 .skills-list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+
 }
 
 .skills-item {
     position: relative;
     overflow: hidden;
+
 }
 
 .skills-text-top {
-    @include font(700, 12px, 1.17, 0.03em);
+    // @include font(700, 12px, 1.17, 0.03em);
+    @include font(700, 14px, 1.14, 0.03em);
     text-align: center;
+
     @include tablet {
         @include font(700, 12px, 1.17, 0.03em);
     }
@@ -51,6 +52,7 @@
     height: 70px;
     @include align;
     justify-content: center;
+
 }
 
 .skills-hidden {
