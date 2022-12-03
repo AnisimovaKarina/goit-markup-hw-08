@@ -19,11 +19,13 @@
         <div class="container header-container">
         <nav class="header-nav">
         <a href="/" class="logo"><span class="accent">Web</span>Studio</a>
-        <a href="" target="_blank" rel="noopener noreferrer nofollow" class="header-link link">
-            <svg class="header-mobile-icon" width="40" height="40">
-                <use href="./images/icons.svg#icon-menu"></use>
+        <button type="button" class="menu-button is-open" aria-expanded="false" data-menu-button>
+            <svg class="header-mobile-icon" aria-label="Перемикач мобільного меню" width="40" height="40">
+                <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+                <use class="icon-cross" href="./images/icons.svg#icon-close"></use>
             </svg>
-        </a>
+        </button>
+        <div class="menu-container"></div>
         <ul class="site-nav list">
             <li class="link-header"><a href="" class="link current">Студія</a></li>
             <li class="link-header"><a href="./portfolio.html" class=" link">Портфоліо</a></li>
@@ -253,7 +255,7 @@
             </div>
         </section>
     </main>
-<footer class="footer">
+<!-- <footer class="footer">
     <div class="footer-container container">
         <div class="footer-wrap">
         <div class="container-address">
@@ -315,7 +317,7 @@
             </div>
         </form>
     </div>
-</footer>
+</footer> -->
     <!-- <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal-close" data-modal-close>
@@ -369,5 +371,6 @@
         </div>
     </div>
     <script src="./js/modal.js"></script> -->
+    <script src="./js/menu.js"></script>
 </body>
 </html>
