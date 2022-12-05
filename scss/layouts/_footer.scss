@@ -5,6 +5,9 @@
 }
 
 .logo-footer {
+    display: flex;
+    justify-content: center;
+
     text-decoration: none;
     font-family: 'raleway', sans-serif;
     @include font(700, 24px, 1.169, 0.03em);
@@ -13,6 +16,29 @@
     }
     @include dektop {
         @include font(700, 26px, 1.19, 0.03em);
+        display: block;
+    }
+}
+
+.footer-wrap{
+    display: block;
+    @include tablet {
+        display: flex;
+        gap: 165px;
+    }
+    @include dektop {
+        display: flex;
+        gap: 0;
+    }
+}
+
+.footer-form{
+    display: block;
+    @include tablet {
+        display: block;
+    }
+    @include dektop {
+        display: flex;
     }
 }
 
@@ -52,10 +78,22 @@
 
 .address-footer {
     margin-top: 20px;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+    }
 }
 
 .footer-hidden {
     margin-bottom: 20px;
+    text-align: center;
+
+    @include tablet {
+        text-align: center;
+    }
+    @include dektop {
+        text-align: start;
+    }
 
     color: var(--acent-text-color);
     @include font(700, 14px, 1.14, 0.03em);
@@ -64,26 +102,57 @@
 
 .footer-container {
     display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
+    // align-items: baseline;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    @media screen and (max-width: 1199px) {
+        align-items: baseline;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
-.footer-wrap{
-    display: flex;
-    // justify-content: space-between;
-    align-items: baseline;
-}
-.form-wrap{
+
+.form-wrap {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    @include tablet {
+        display: block;
+        justify-content: center;
+    }
+    @include dektop {
+        display: flex;
+    }
 }
 
 .container-address {
-    margin-right: 97px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    @include tablet {
+        // margin-right: 97px; 
+    }
+    @include dektop {
+        display: block;
+        margin-bottom: 0;
+        margin-right: 97px;
+    }
 }
 
 .container-link {
-    margin-right: 94px;
+    display: block;
+    margin-bottom: 60px;
+    @include tablet {
+        display: block;
+        justify-content: center;
+    }
+    @include dektop {
+        // display: flex;
+        margin-right: 94px;
+        margin-bottom: 0;
+    }
 }
 
 .footer-soc-list {
@@ -127,6 +196,13 @@
     @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color: var(--acent-text-color);
+    text-align: center;
+    @include tablet {
+        text-align: center;
+    }
+    @include dektop {
+        text-align: start;
+    }
 
     & span {
         display: block;
@@ -135,8 +211,17 @@
 }
 
 .footer-input {
-    width: 358px;
+    width: 450px;
     height: 50px;
+    @include tablet {
+        width: 450px;
+        height: 50px; 
+    }
+    @include dektop {
+        width: 358px;
+        height: 50px;
+    }
+
     transition: fill 250ms linear;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -156,8 +241,19 @@
 
 .footer-button {
     padding: 10px 28px;
-    margin: 0 auto;
+    margin-top: 20px;
     display: block;
+
+    @include tablet {
+        margin: 0 auto;
+        margin-top: 20px;
+        display: block;
+    }
+    @include dektop {
+        margin: 0 auto;
+        margin-left: 12px;
+        display: block;
+    }
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -167,7 +263,7 @@
     @include font(700, 16px, 1.87, 0.06em);
     border: none;
     cursor: pointer;
-    margin-left: 12px;
+
 
     @include align;
     justify-content: center;

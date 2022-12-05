@@ -4,13 +4,25 @@
     background-color: rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
+    left: 0;
+
+    overflow-y: scroll;
 
     transition: opacity 250ms linear, visibility 250ms linear;
 }
 
 .modal {
-    width: 528px;
-    min-height: 581px;
+    width: 450px;
+    min-height: 609px;
+
+    @include tablet {
+        width: 450px;
+        min-height: 609px;
+    }
+    @include dektop {
+        width: 528px;
+        min-height: 581px;
+    }
     background-color: var(--acent-text-color);
     position: absolute;
     top: 50%;
@@ -49,7 +61,7 @@
     }
 }
 
-.modal-title {
+.modal-title {    
     @include font(700, 20px, 1.15, 0.03em);
     text-align: center;
     color: var(--title-text-color);
@@ -161,9 +173,16 @@
 }
 
 .check-text {
-    @include font(400, 14px, 1.71, 0.03em);
+    @include font(400, 12px, 1.16, 0.03em);
+    @include tablet {
+        @include font(400, 12px, 1.16, 0.03em);
+    }
+    @include dektop {
+        @include font(400, 14px, 1.71, 0.03em);
+    }
     color: var(--primary-text-color);
     @include align;
+
 }
 
 .check-text span {
@@ -189,7 +208,13 @@
 .check-link {
     color: #2196F3;
     display: block;
-    @include font(400, 14px, 1.71, 0.03em);
+    @include font(400, 12px, 1.16, 0.03em);
+    @include tablet {
+        @include font(400, 12px, 1.16, 0.03em);
+    }
+    @include dektop {
+        @include font(400, 14px, 1.71, 0.03em);
+    }
     text-decoration-line: underline;
     margin-left: 5px;
 }
