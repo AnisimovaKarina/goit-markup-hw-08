@@ -11,9 +11,9 @@
     text-decoration: none;
     font-family: 'raleway', sans-serif;
     @include font(700, 26px, 1.19, 0.03em);
-    @media screen and (max-width: 767px) {
-        display: none;
-    }
+    // @media screen and (max-width: 767px) {
+    //     display: none;
+    // }
 }
 
 .header-link:not(:last-child){
@@ -94,9 +94,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media screen and (max-width: 767px) {
-        justify-content: end;
-    }
+    // @media screen and (max-width: 767px) {
+    //     justify-content: end;
+    // }
     
 }
 
@@ -125,7 +125,7 @@
 }
 
 .header-navision{
-    margin-bottom: 300px;
+    margin-bottom: 360px;
     @include tablet {
         margin-bottom: 0;
     }
@@ -183,6 +183,7 @@
 }
 
 .adress-header .link {
+    display: block;
     color: var(--primary-text-color);
     @include font(500, 24px, 1.17, 0.02em);
     @include mobile {
@@ -193,6 +194,8 @@
     }
     @include dektop {
         @include font(500, 14px, 1.14, 0.02em);
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
     transition: color 250ms linear;
     &:hover, &:focus {

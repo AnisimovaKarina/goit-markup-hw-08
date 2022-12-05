@@ -22,13 +22,16 @@
 
 .footer-wrap{
     display: block;
+    margin-bottom: 60px;
     @include tablet {
         display: flex;
         gap: 165px;
+        margin-bottom: 60px;
     }
     @include dektop {
         display: flex;
-        gap: 0;
+        gap: 70px;
+        margin-bottom: 0;
     }
 }
 
@@ -102,6 +105,13 @@
 
 .footer-container {
     display: flex;
+    gap: 0;
+    @include tablet {
+        gap: 0;
+    }
+    @include dektop {
+        gap: 120px;
+    }
     // align-items: baseline;
     // flex-wrap: wrap;
     // justify-content: center;
@@ -132,25 +142,26 @@
     justify-content: center;
     margin-bottom: 60px;
     @include tablet {
-        // margin-right: 97px; 
+        margin-bottom: 0; 
     }
     @include dektop {
         display: block;
         margin-bottom: 0;
-        margin-right: 97px;
+        margin-right: 0;
     }
 }
 
 .container-link {
     display: block;
-    margin-bottom: 60px;
+    margin-bottom: 0;
     @include tablet {
         display: block;
         justify-content: center;
+        margin-bottom: 0;
     }
     @include dektop {
         // display: flex;
-        margin-right: 94px;
+        margin-right: 0;
         margin-bottom: 0;
     }
 }
