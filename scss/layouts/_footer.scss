@@ -213,6 +213,10 @@
 .footer-input {
     width: 450px;
     height: 50px;
+    max-width: 320px;
+    @media screen and (min-width: 480px){
+        max-width: 450px;
+    }
     @include tablet {
         width: 450px;
         height: 50px; 

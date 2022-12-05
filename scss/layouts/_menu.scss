@@ -78,7 +78,10 @@
     }
 }
 .menu-social-link{
-    @include font(500, 18px, 1.22, 0.02em);
+    @include font(500, 12px, 1.22, 0.02em);
+        @include mobile {
+        @include font(500, 18px, 1.22, 0.02em);
+    }
     color: var(--acent-color)
 }
 .menu-social-item{
